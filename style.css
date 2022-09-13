@@ -2,3 +2,23 @@
 body{
     background-color: aqua;
 }
+
+#search_container{
+border: 3px solid green;
+display: flex;
+justify-content: center;
+height: 15vh;
+align-items: center;
+
+
+}
+
+#search_bar{
+    width: 60vw;
+    text-align: center;
+    height: 5vh;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+
+}
