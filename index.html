@@ -34,6 +34,55 @@
     <!-- implement JS cards -->
     <div id="card_container"></div>
 
+    <button
+      class="btn btn-warning"
+      data-bs-toggle="modal"
+      data-bs-target="#entireModal"
+    ></button>
+    <div id="modal_test">
+      <div class="modal" id="entireModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div id="ingredient_container">
+                <div id="modal_img_container">
+                  <img id="modal_img" src="${mealImg}" alt="${mealName}" />
+                </div>
+                <div id="modal_ingredients">
+                  <p id="ingredient_text"></p>
+                  <!-- -${mealObj[ingredientKey]}: ${mealObj[measurementKey]} -->
+                </div>
+              </div>
+
+              <div id="modal_instructions_container">
+                <p id="modal_instructions"></p>
+              </div>
+              <div id="modal_video_container">
+                <div>
+                  <iframe
+                    id="modal_video"
+                    width="100%"
+                    height="1520px"
+                    src=""
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

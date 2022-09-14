@@ -1,66 +1,88 @@
 /*  */
-body{
-    background-color: aqua;
+body {
+  background-color: aqua;
 }
 
-#search_container{
-border: 3px solid green;
-display: flex;
-justify-content: center;
-height: 15vh;
-align-items: center;
-
-
+#search_container {
+  border: 3px solid green;
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+  align-items: center;
 }
 
-#search_bar{
-    width: 60vw;
-    text-align: center;
-    height: 5vh;
-    border-radius: 10px;
-    margin-right: 10px;
-    font-size: 1.5rem;
-
+#search_bar {
+  width: 60vw;
+  text-align: center;
+  height: 5vh;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 
 #card_container {
+  display: flex;
 
-    display: flex;
-  
-    flex-wrap: wrap;
-  
-    margin: 0 1%;
-  
-  }
-  
-  
-  
-  /* js card */
-  
-  
-  
-  .card_style {
-  
-    /* height: 15%; */
-  
-    width: 23%;
-  
-    margin: 1%;
-  
-  }
-  
-  
-  
-  .card-body {
-  
-    display: flex;
-  
-    flex-direction: column;
-  
-    align-items: center;
-  
-    justify-content: space-evenly;
-  
-    text-align: center;
-  
-  }
+  flex-wrap: wrap;
+
+  margin: 0 1%;
+}
+
+.card_style {
+  width: 23%;
+  margin: 1%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#modal_img_container,
+#modal_ingredients,
+#modal_instructions_container,
+#modal_video_container {
+  border: 3px solid black;
+}
+
+#modal_instructions_container,
+#modal_video_container {
+  width: 35%;
+}
+
+#ingredient_container {
+  width: 20%;
+}
+
+#modal_img_container {
+  height: 25%;
+}
+
+#modal_ingredients {
+  height: 70%;
+  margin-top: 10%;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#modal_img {
+  height: 100%;
+  width: 100%;
+}
+
+#modal_video {
+  height: 1525px;
+  width: 100%;
+}
+
+#modal_instructions {
+  text-align: center;
+  padding: 2.5%;
+  font-size: 150%;
+}
