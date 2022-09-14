@@ -133,67 +133,72 @@ function displayRecipe(evt){
     const clickedID = clickedElt.id;
     if (clickedElt.classList.contains("recipe_btn")){
  
-
-
-
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${clickedID}`)
     .then((response) => response.json())
     .then((data) => {
-        let index = 1;
+        const mealObj = data.meals[0]
         const instructions = data.meals[0].strInstructions;
         const video = data.meals[0].strYoutube;
         const mealName = data.meals[0].strMeal;
         const mealImg = data.meals[0].strMealThumb;
-        const ingr1 = data.meals[0].strIngredient1;
-        
-        for (let i = 1; i < 21; i++) {
-            const ingredients = data.meals[0].newIngr;
 
-            ingr = "strIngredient1";
-          
-          
-          
-            newIngr = ingr.replace(1, i);
-          
-          
-          
-            console.log(`${data.meals[0]}.${newIngr}`.valueOf);
-          
-          }
-        // const filtered = ingredients.filter(obj => {
-        //     return obj.strIngredient1;
-        // })
-        // console.log(filtered);
-        // console.log(mealImg);
-        // console.log(mealName);
-        // console.log(ingr1);
-        
-        // for (let i = 0; i < 20; i++) {
-        //     const ingr = ".strIngredient1"
-        //     const newIngr = ingr.replaceAt(14, i)
-        //     console.log(data.meals[0].newIngr);
-
-
-        //     // console.log(data.meals.strIngredient + `${i}`.value);
-       
-            
-        // }
-        // console.log(data.meals[0].strIngredient1);
-        // console.log(instructions);
-        // console.log(video);
-        // if (data.meals.hasOwnProperty("strIngredient*")) {
-        //     console.log(data.meals.strIngredient);
-
-        // }
-        
-
-        
-       
-        
-       
-        
+        let keys = Object.keys(mealObj);
+        let filteredIngredients = keys.filter(
+          (key) => key.includes("strIngredient") && mealObj[key]
+        );
+        let filteredMeasurements = keys.filter(
+          (key) => key.includes("strMeasure") && mealObj[key]
+        );
+  
+        filteredIngredients.forEach((element, index) => {
+          const ingredientKey = filteredIngredients[index];
+          const measurementKey = filteredMeasurements[index];
+          console.log(`${mealObj[ingredientKey]}: ${mealObj[measurementKey]}`);
+        });
     })
     }
   
-    
+    const modal = cardFactory({
+      eltType: "div",
+      classNames: ["modal"],
+      attributes:[{
+        name: "tabindex",
+        value: "-1"
+        }],
+      parentElt: document.body
+    })
 }
+
+
+/* <div class="modal" tabindex="-1">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title">Modal title</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      </div>
+
+      <div class="modal-body">
+
+        <div id="img_ingredients">
+          <div id="img"></div>
+          <div id="ingred"></div>
+        </div>
+
+        <div id="instructions"></div>
+
+        <div id="video"></div>
+
+      </div>
+
+          </div>
+
+  </div>
+
+</div> */
