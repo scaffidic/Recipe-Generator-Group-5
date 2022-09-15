@@ -142,23 +142,30 @@ function displayRecipe(evt) {
         let filteredMeasurements = keys.filter(
           (key) => key.includes("strMeasure") && mealObj[key]
         );
-
-        filteredIngredients.forEach((element, index) => {
-          const ingredientKey = filteredIngredients[index];
-          const measurementKey = filteredMeasurements[index];
-          // console.log(`${mealObj[ingredientKey]}: ${mealObj[measurementKey]}`);
           document.querySelector(".modal-title").innerText = mealName;
           document.querySelector("#modal_img").src = mealImg;
           document.querySelector("#modal_img").alt = mealName;
-          document.querySelector(
-            "#ingredient_text"
-          ).innerText = `-${mealObj[ingredientKey]}: ${mealObj[measurementKey]}`;
           document.querySelector("#modal_instructions").innerText =
             instructions;
           document.querySelector(
             "#modal_video"
           ).src = `https://www.youtube.com/embed/${path}`;
+
+        filteredIngredients.forEach((element, index) => {
+          const ingredientKey = filteredIngredients[index];
+          const measurementKey = filteredMeasurements[index];
+
+          document.querySelector(
+            "#ingredient_text"
+          ).innerText += `- ${mealObj[ingredientKey]}: ${mealObj[measurementKey]}\n`;
+
         });
       });
   }
+}
+document.querySelector(".btn-close").addEventListener("click", resetIngredient);
+
+function resetIngredient() {
+const container = document.getElementById("modal_ingredients");
+document.getElementById("ingredient_text").innerText = "";
 }
