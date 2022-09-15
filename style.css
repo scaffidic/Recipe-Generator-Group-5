@@ -1,10 +1,41 @@
 /*  */
 body {
-  background-color: aqua;
+  background-color: #f4a261;
+}
+#page_title {
+padding-top:7%;
+text-align: center;
+color: white;
+}
+
+#search_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search_btn {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: transparent;
+  border-style: none;
+}
+
+
+#search_icon {
+  font-size: 4rem;
+  color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+#search_icon:hover {
+  background-color: white;
+  color: green;
+  border-radius: 50%;
 }
 
 #search_container {
-  border: 3px solid green;
+  /* border: 3px solid green; */
   display: flex;
   justify-content: center;
   height: 15vh;
@@ -18,6 +49,8 @@ body {
   border-radius: 10px;
   margin-right: 10px;
   font-size: 1.5rem;
+  box-shadow: 0 4px 2px -2px gray;
+  border: none;
 }
 
 #card_container {
@@ -41,12 +74,16 @@ body {
   text-align: center;
 }
 
-#modal_img_container,
+.card-img-top {
+  border-top: 10%;
+}
+
+/* #modal_img_container,
 #modal_ingredients,
 #modal_instructions_container,
 #modal_video_container {
   border: 3px solid black;
-}
+} */
 
 #modal_instructions_container,
 #modal_video_container {
@@ -57,32 +94,87 @@ body {
   width: 20%;
 }
 
-#modal_img_container {
+/* #modal_img_container {
   height: 25%;
-}
+} */
 
 #modal_ingredients {
   height: 70%;
   margin-top: 10%;
+  /* text-align: center; */
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .modal-body {
   display: flex;
   justify-content: space-evenly;
+  background-color: #fefae0;
+}
+
+.modal-title {
+  font-size: 2.2rem;
 }
 
 #modal_img {
-  height: 100%;
-  width: 100%;
+  height: 225px;
+  width: 250px;
+  border-radius: 5%;
+  margin-top: 50px;
 }
 
-#modal_video {
+/* #modal_video {
   height: 1525px;
   width: 100%;
-}
+} */
 
 #modal_instructions {
   text-align: center;
   padding: 2.5%;
-  font-size: 150%;
+  font-size: 125%;
+}
+
+.modal-header {
+  background-color: #f4a261;
+  color: white;
+  flex-direction: column-reverse;
+}
+
+.modal-content {
+  opacity: .88;
+  background-color: #fefae0;
+}
+
+.btn-close {
+  color: white;
+}
+
+#modal_video_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+
+#iframe_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 30vh;
+}
+
+#iframe_container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#modal_instructions_container {
+  margin-top: 4.80%;
+  overflow: auto;
+}
+#modal_ingredients {
+  overflow: auto;
 }
