@@ -23,7 +23,7 @@ button {
   color: white;
   background-color: #f4a261;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 #search_form {
@@ -108,11 +108,18 @@ button {
   color: white;
 }
 
+.btn{
+  background-color:white;
+  border: 3px solid white;
+}
+
 .btn-primary {
   color: black;
   font-size: 100%;
   font-weight: bolder;
+  
 }
+
 
 #modal_instructions_container,
 #modal_video_container {
@@ -144,7 +151,7 @@ button {
 #modal_img {
   height: 225px;
   width: 250px;
-  border-radius: 5%;
+  border-radius: 15%;
   margin-top: 50px;
 }
 
@@ -417,3 +424,224 @@ svg {
 .bi-linkedin {
   color: lightseagreen;
 }
+
+@media screen and (max-width:481px) {
+
+
+
+  #page_title {
+  
+    font-size: 2rem;
+  
+    padding-top: 20%;
+  
+  }
+  
+  #search_bar {
+  
+    font-size: 1rem;
+  
+  }
+  
+  
+  
+  #card_container {
+  
+    margin: 30% 20%;
+  
+  }
+  
+  
+  
+  .card {
+  
+    width: auto;
+  
+  }
+  
+  
+  
+    .modal-body{
+  
+       display: block;
+  
+      }
+  
+  
+  
+    #ingredient_container {
+  
+      width: auto;
+  
+  }
+  
+  
+  
+  #modal_img_container {
+  
+      display: inline-block;
+  
+    }
+  
+  
+  
+  #modal_img {
+  
+      height: 125px;
+  
+      width: 125px;
+  
+  }
+  
+  
+  
+    #modal_ingredients {
+  
+      display: inline-block;
+  
+      margin-left: 1px;
+  
+    }
+  
+  
+  
+    #modal_instructions_container {
+  
+      width: 100%;
+  
+  }
+  
+  
+  
+    #modal_instructions {
+  
+      display: block;
+  
+    }
+  
+    #modal_video_container {
+  
+      width: auto;
+  
+    }
+  
+  
+  
+    #iframe_container {
+  
+      width: 100%;
+  
+    }
+  
+    .footer-distributed h3 {
+  
+      font-size: 1.3rem;
+  
+    }
+  
+  }
+
+  @media screen and (min-width:481px) and (max-width:768px) {
+
+    #page_title {
+  
+      font-size: 2rem;
+  
+      padding-top: 10%;
+  
+     }
+  
+  
+  
+     #search_bar {
+  
+      font-size: 1.2rem;
+  
+     }
+  
+  
+  
+     .card_style {
+  
+      width: 43vw;
+  
+      margin-left: 4%;
+  
+      margin-bottom: 2%;
+  
+    }
+  
+  
+  
+    .modal-body{
+  
+      display: block;
+  
+     }
+  
+  
+  
+     #ingredient_container {
+  
+      width: auto;
+  
+  }
+  
+  #modal_img_container {
+  
+    display: inline-block;
+  
+  }
+  
+  #modal_img {
+  
+    height: 200px;
+  
+    width: 170px;
+  
+  }
+  
+  
+  
+  #modal_ingredients {
+  
+    display: inline-block;
+  
+    margin-left: 2%;
+  
+  }
+  
+  
+  
+  #modal_instructions_container {
+  
+    width: 100%;
+  
+  }
+  
+  #modal_video_container {
+  
+    width: auto;
+  
+  }
+  
+  }
+
+  @media screen and (min-width:769px) and (max-width:1024px) {
+
+    #page_title {
+  
+      font-size: 2.75rem;
+  
+      padding-top: 7%;
+  
+     }
+  
+     .footer-distributed h3 {
+  
+      font-size: 1.5rem;
+  
+    }
+  
+  }
+
