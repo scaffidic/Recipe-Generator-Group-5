@@ -76,9 +76,7 @@ button {
 
 #card_container {
   display: flex;
-
   flex-wrap: wrap;
-
   margin: 0 1%;
 }
 
@@ -108,8 +106,8 @@ button {
   color: white;
 }
 
-.btn{
-  background-color:white;
+.btn {
+  background-color: white;
   border: 3px solid white;
 }
 
@@ -117,9 +115,7 @@ button {
   color: black;
   font-size: 100%;
   font-weight: bolder;
-  
 }
-
 
 #modal_instructions_container,
 #modal_video_container {
@@ -133,7 +129,6 @@ button {
 #modal_ingredients {
   height: 70%;
   margin-top: 10%;
-  /* text-align: center; */
   font-weight: 700;
   font-size: 1rem;
 }
@@ -223,13 +218,9 @@ button {
   vertical-align: top;
 }
 
-/* Footer left */
-
 .footer-distributed .footer-left {
   width: 40%;
 }
-
-/* The company logo */
 
 .footer-distributed h3 {
   color: #ffffff;
@@ -240,8 +231,6 @@ button {
 .footer-distributed h3 span {
   color: lightseagreen;
 }
-
-/* Footer links */
 
 .footer-distributed .footer-links {
   color: #ffffff;
@@ -272,8 +261,6 @@ button {
 h3 {
   text-align: center;
 }
-
-/* Footer Center */
 
 .footer-distributed .footer-center {
   width: 35%;
@@ -331,8 +318,6 @@ h3 {
   content: none;
 }
 
-/* Footer Right */
-
 .footer-distributed .footer-right {
   width: 20%;
 }
@@ -344,6 +329,7 @@ h3 {
 .footer-icons {
   margin-left: 21.5%;
 }
+
 .footer-distributed .footer-company-about {
   line-height: 20px;
   color: #92999f;
@@ -370,17 +356,13 @@ h3 {
   height: 50px;
   cursor: pointer;
   border-radius: 2px;
-
   font-size: 20px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-
   margin-right: 3px;
   margin-bottom: 5px;
 }
-
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
   .footer-distributed {
@@ -425,223 +407,121 @@ svg {
   color: lightseagreen;
 }
 
-@media screen and (max-width:481px) {
-
-
-
+@media screen and (max-width: 481px) {
   #page_title {
-  
     font-size: 2rem;
-  
     padding-top: 20%;
-  
   }
-  
+
   #search_bar {
-  
     font-size: 1rem;
-  
   }
-  
-  
-  
+
   #card_container {
-  
     margin: 30% 20%;
-  
   }
-  
-  
-  
+
   .card {
-  
     width: auto;
-  
-  }
-  
-  
-  
-    .modal-body{
-  
-       display: block;
-  
-      }
-  
-  
-  
-    #ingredient_container {
-  
-      width: auto;
-  
-  }
-  
-  
-  
-  #modal_img_container {
-  
-      display: inline-block;
-  
-    }
-  
-  
-  
-  #modal_img {
-  
-      height: 125px;
-  
-      width: 125px;
-  
-  }
-  
-  
-  
-    #modal_ingredients {
-  
-      display: inline-block;
-  
-      margin-left: 1px;
-  
-    }
-  
-  
-  
-    #modal_instructions_container {
-  
-      width: 100%;
-  
-  }
-  
-  
-  
-    #modal_instructions {
-  
-      display: block;
-  
-    }
-  
-    #modal_video_container {
-  
-      width: auto;
-  
-    }
-  
-  
-  
-    #iframe_container {
-  
-      width: 100%;
-  
-    }
-  
-    .footer-distributed h3 {
-  
-      font-size: 1.3rem;
-  
-    }
-  
   }
 
-  @media screen and (min-width:481px) and (max-width:768px) {
-
-    #page_title {
-  
-      font-size: 2rem;
-  
-      padding-top: 10%;
-  
-     }
-  
-  
-  
-     #search_bar {
-  
-      font-size: 1.2rem;
-  
-     }
-  
-  
-  
-     .card_style {
-  
-      width: 43vw;
-  
-      margin-left: 4%;
-  
-      margin-bottom: 2%;
-  
-    }
-  
-  
-  
-    .modal-body{
-  
-      display: block;
-  
-     }
-  
-  
-  
-     #ingredient_container {
-  
-      width: auto;
-  
+  .modal-body {
+    display: block;
   }
-  
+
+  #ingredient_container {
+    width: auto;
+  }
+
   #modal_img_container {
-  
     display: inline-block;
-  
   }
-  
+
   #modal_img {
-  
-    height: 200px;
-  
-    width: 170px;
-  
+    height: 125px;
+    width: 125px;
   }
-  
-  
-  
+
   #modal_ingredients {
-  
     display: inline-block;
-  
-    margin-left: 2%;
-  
+    margin-left: 1px;
   }
-  
-  
-  
+
   #modal_instructions_container {
-  
     width: 100%;
-  
   }
-  
+
+  #modal_instructions {
+    display: block;
+  }
+
   #modal_video_container {
-  
     width: auto;
-  
-  }
-  
   }
 
-  @media screen and (min-width:769px) and (max-width:1024px) {
-
-    #page_title {
-  
-      font-size: 2.75rem;
-  
-      padding-top: 7%;
-  
-     }
-  
-     .footer-distributed h3 {
-  
-      font-size: 1.5rem;
-  
-    }
-  
+  #iframe_container {
+    width: 100%;
   }
 
+  .footer-distributed h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #page_title {
+    font-size: 2rem;
+    padding-top: 10%;
+  }
+
+  #search_bar {
+    font-size: 1.2rem;
+  }
+
+  .card_style {
+    width: 43vw;
+    margin-left: 4%;
+    margin-bottom: 2%;
+  }
+
+  .modal-body {
+    display: block;
+  }
+
+  #ingredient_container {
+    width: auto;
+  }
+
+  #modal_img_container {
+    display: inline-block;
+  }
+
+  #modal_img {
+    height: 200px;
+    width: 170px;
+  }
+
+  #modal_ingredients {
+    display: inline-block;
+    margin-left: 2%;
+  }
+
+  #modal_instructions_container {
+    width: 100%;
+  }
+
+  #modal_video_container {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #page_title {
+    font-size: 2.75rem;
+    padding-top: 7%;
+  }
+
+  .footer-distributed h3 {
+    font-size: 1.5rem;
+  }
+}
