@@ -157,10 +157,11 @@ function displayRecipe(evt) {
           ).innerText += `- ${mealObj[ingredientKey]}: ${mealObj[measurementKey]}\n`;
         });
       });
+    if (clickedElt.classList.contains("recipe_btn")) {
+      resetIngredient();
+    }
   }
 }
-document.querySelector(".btn-close").addEventListener("click", resetIngredient);
-
 function resetIngredient() {
   const container = document.getElementById("modal_ingredients");
   document.getElementById("ingredient_text").innerText = "";
